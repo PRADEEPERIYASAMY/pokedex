@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:menuCategory="container">
+        <item android:id="@+id/nav_pokemon"
+            android:title="Pokemon"
+            android:icon="@drawable/ic_pokemon" />
+        <item android:id="@+id/nav_item"
+            android:title="Item"
+            android:icon="@drawable/ic_item"/>
+        <item android:id="@+id/nav_location"
+            android:title="Location"
+            android:icon="@drawable/ic_location"/>
+        <item android:id="@+id/nav_type"
+            android:title="Type"
+            android:icon="@drawable/ic_type"/>
+        <item android:id="@+id/nav_region"
+            android:title="Regions"
+            android:icon="@drawable/ic_region"/>
+        <item android:id="@+id/nav_starred"
+            android:title="Starred"
+            android:icon="@drawable/ic_starred"/>
+    </group>
+</menu>

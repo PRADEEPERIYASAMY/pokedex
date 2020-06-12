@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegionsFragment"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ProgressBar
+            android:id="@+id/progressBarregions"
+            style="@android:style/Widget.Holo.Light.ProgressBar"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="450dp"
+            android:elevation="10dp"
+            android:background="@android:color/transparent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/second_pokemon"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#536DFE"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:contentPadding="15dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="#7C43ED"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Regions"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:background="#4FC3F7"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    tools:ignore="RtlCompat"
+                    android:layout_marginTop="-5dp"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="#7C43ED"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp"
+                android:layout_marginTop="80dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/recycler_regions_item"
+                    />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</FrameLayout>

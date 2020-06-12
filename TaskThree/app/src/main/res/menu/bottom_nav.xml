@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Data"
+        android:id="@+id/bot_data"
+        android:icon="@drawable/ic_data"/>
+    <item android:title="Evolutions"
+        android:id="@+id/bot_evolutions"
+        android:icon="@drawable/ic_evolution"/>
+    <item android:title="Types"
+        android:id="@+id/bot_type"
+        android:icon="@drawable/ic_type"/>
+    <item android:title="Moves"
+        android:id="@+id/bot_moves"
+        android:icon="@drawable/ic_moves"/>
+</menu>

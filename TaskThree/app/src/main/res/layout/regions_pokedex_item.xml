@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        app:cardBackgroundColor="#00ACFF"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="5dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="10dp">
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:id="@+id/region_pokedex_count"
+                android:text="111"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:padding="4dp"
+                android:text="hello"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:id="@+id/region_pokedex_name"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
