@@ -162,66 +162,70 @@ public class DataFragment extends Fragment {
 
         values = 0;
 
-        if (pokemonSpecies.getFlavor_text_entries () != null &&pokemonSpecies.getFlavor_text_entries ().size ()>0 && pokemonSpecies.getFlavor_text_entries ().get ( 0 ).getLanguage ().getName ().contains ( "en" )){
-            description.setText ( pokemonSpecies.getFlavor_text_entries ().get ( 0 ).getFlavor_text () );
-        }
-        else {
-            description.setText ( "Null");
-        }
-
-        name.setText ( pokemons.getName () );
-        height.setText ( String.valueOf ( pokemons.getHeight () ) );
-        weight.setText ( String.valueOf ( pokemons.getWeight () ) );
-        id.setText ( String.valueOf ( Id ) );
-
-        stat = pokemons.getStats ();
-
-        for (int i = 0; i<6;i++){
-            if(values < stat.get ( i ).getBase_stat () ){
-                values = stat.get ( i ).getBase_stat ();
+        try {
+            if (pokemonSpecies.getFlavor_text_entries () != null &&pokemonSpecies.getFlavor_text_entries ().size ()>0 && pokemonSpecies.getFlavor_text_entries ().get ( 0 ).getLanguage ().getName ().contains ( "en" )){
+                description.setText ( pokemonSpecies.getFlavor_text_entries ().get ( 0 ).getFlavor_text () );
             }
+            else {
+                description.setText ( "Null");
+            }
+
+            name.setText ( pokemons.getName () );
+            height.setText ( String.valueOf ( pokemons.getHeight () ) );
+            weight.setText ( String.valueOf ( pokemons.getWeight () ) );
+            id.setText ( String.valueOf ( Id ) );
+
+            stat = pokemons.getStats ();
+
+            for (int i = 0; i<6;i++){
+                if(values < stat.get ( i ).getBase_stat () ){
+                    values = stat.get ( i ).getBase_stat ();
+                }
+            }
+
+            hpValue.setText ( String.valueOf ( stat.get ( 5 ).getBase_stat () ) );
+            attackValue.setText ( String.valueOf ( stat.get ( 4 ).getBase_stat () ) );
+            defenseValue.setText ( String.valueOf ( stat.get ( 3 ).getBase_stat () ) );
+            specialAttackValue.setText ( String.valueOf ( stat.get ( 2 ).getBase_stat () ) );
+            specialDefenseValue.setText ( String.valueOf ( stat.get ( 1 ).getBase_stat () ) );
+            speedValue.setText ( String.valueOf ( stat.get ( 0 ).getBase_stat () ) );
+            totalValue.setText ( String.valueOf ( stat.get ( 5 ).getBase_stat ()+stat.get ( 4 ).getBase_stat ()+stat.get ( 3 ).getBase_stat ()+stat.get ( 2 ).getBase_stat ()+stat.get ( 1 ).getBase_stat ()+stat.get ( 0 ).getBase_stat () ) );
+
+            hp.getLayoutParams ().width = (hp.getLayoutParams ().width/255)* Integer.parseInt ( hpValue.getText ().toString () );
+            attack.getLayoutParams ().width = (attack.getLayoutParams ().width/190)* Integer.parseInt ( attackValue.getText ().toString () );
+            defense.getLayoutParams ().width = (defense.getLayoutParams ().width/250)* Integer.parseInt ( defenseValue.getText ().toString () );
+            specialAttack.getLayoutParams ().width = (specialAttack.getLayoutParams ().width/194)* Integer.parseInt ( specialAttackValue.getText ().toString () );
+            specialDefense.getLayoutParams ().width = (specialDefense.getLayoutParams ().width/250)* Integer.parseInt ( specialDefenseValue.getText ().toString () );
+            speed.getLayoutParams ().width = (speed.getLayoutParams ().width/180)* Integer.parseInt ( speedValue.getText ().toString () );
+            total.getLayoutParams ().width = (total.getLayoutParams ().width/130)* (Integer.parseInt ( totalValue.getText ().toString () )/6);
+
+            Glide.with ( getActivity () ).load ( new PokemonImages ( Id-1 ).getImagesSelected () ).into ( secondPokemonImage );
+
+
+            Glide.with ( getActivity () ).load ( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/"+String.valueOf ( Id )+".png" ).into ( spriteOne );
+            Glide.with ( getActivity () ).load ( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/"+String.valueOf (Id)+".png" ).into ( spriteTwo );
+            Glide.with ( getActivity () ).load ( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+String.valueOf ( Id )+".png" ).into ( spriteThree );
+            Glide.with ( getActivity () ).load ( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/"+String.valueOf ( Id )+".png" ).into ( spriteFour );
+
+            if (pokemonSpecies.getHabitat () != null){
+                habitat.setText ( String.valueOf ( pokemonSpecies.getHabitat ().getName () ) );
+            }
+            else {
+                habitat.setText ( "null" );
+            }
+
+            captureRate.setText ( String.valueOf ( pokemonSpecies.getCapture_rate () ) );
+            happiness.setText ( String.valueOf ( pokemonSpecies.getBase_happiness () ) );
+            growthRate.setText ( String.valueOf ( pokemonSpecies.getGrowth_rate ().getName () ) );
+            color.setText ( String.valueOf ( pokemonSpecies.getColor ().getName () ) );
+            shape.setText ( String.valueOf ( pokemonSpecies.getShape ().getName () ) );
+            genderDifference.setText ( String.valueOf ( pokemonSpecies.has_gender_differences ) );
+            hatchCounter.setText ( String.valueOf ( pokemonSpecies.getHatch_counter () ) );
+            genderRate.setText ( String.valueOf ( pokemonSpecies.getGender_rate () ) );
         }
-
-        hpValue.setText ( String.valueOf ( stat.get ( 5 ).getBase_stat () ) );
-        attackValue.setText ( String.valueOf ( stat.get ( 4 ).getBase_stat () ) );
-        defenseValue.setText ( String.valueOf ( stat.get ( 3 ).getBase_stat () ) );
-        specialAttackValue.setText ( String.valueOf ( stat.get ( 2 ).getBase_stat () ) );
-        specialDefenseValue.setText ( String.valueOf ( stat.get ( 1 ).getBase_stat () ) );
-        speedValue.setText ( String.valueOf ( stat.get ( 0 ).getBase_stat () ) );
-        totalValue.setText ( String.valueOf ( stat.get ( 5 ).getBase_stat ()+stat.get ( 4 ).getBase_stat ()+stat.get ( 3 ).getBase_stat ()+stat.get ( 2 ).getBase_stat ()+stat.get ( 1 ).getBase_stat ()+stat.get ( 0 ).getBase_stat () ) );
-
-        hp.getLayoutParams ().width = (hp.getLayoutParams ().width/255)* Integer.parseInt ( hpValue.getText ().toString () );
-        attack.getLayoutParams ().width = (attack.getLayoutParams ().width/190)* Integer.parseInt ( attackValue.getText ().toString () );
-        defense.getLayoutParams ().width = (defense.getLayoutParams ().width/250)* Integer.parseInt ( defenseValue.getText ().toString () );
-        specialAttack.getLayoutParams ().width = (specialAttack.getLayoutParams ().width/194)* Integer.parseInt ( specialAttackValue.getText ().toString () );
-        specialDefense.getLayoutParams ().width = (specialDefense.getLayoutParams ().width/250)* Integer.parseInt ( specialDefenseValue.getText ().toString () );
-        speed.getLayoutParams ().width = (speed.getLayoutParams ().width/180)* Integer.parseInt ( speedValue.getText ().toString () );
-        total.getLayoutParams ().width = (total.getLayoutParams ().width/130)* (Integer.parseInt ( totalValue.getText ().toString () )/6);
-
-        Glide.with ( getActivity () ).load ( new PokemonImages ( Id-1 ).getImagesSelected () ).into ( secondPokemonImage );
-
-
-        Glide.with ( getActivity () ).load ( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/"+String.valueOf ( Id )+".png" ).into ( spriteOne );
-        Glide.with ( getActivity () ).load ( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/"+String.valueOf (Id)+".png" ).into ( spriteTwo );
-        Glide.with ( getActivity () ).load ( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+String.valueOf ( Id )+".png" ).into ( spriteThree );
-        Glide.with ( getActivity () ).load ( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/"+String.valueOf ( Id )+".png" ).into ( spriteFour );
-
-        if (pokemonSpecies.getHabitat () != null){
-            habitat.setText ( String.valueOf ( pokemonSpecies.getHabitat ().getName () ) );
+        catch (NullPointerException e){
+            e.printStackTrace ();
         }
-        else {
-            habitat.setText ( "null" );
-        }
-
-        captureRate.setText ( String.valueOf ( pokemonSpecies.getCapture_rate () ) );
-        happiness.setText ( String.valueOf ( pokemonSpecies.getBase_happiness () ) );
-        growthRate.setText ( String.valueOf ( pokemonSpecies.getGrowth_rate ().getName () ) );
-        color.setText ( String.valueOf ( pokemonSpecies.getColor ().getName () ) );
-        shape.setText ( String.valueOf ( pokemonSpecies.getShape ().getName () ) );
-        genderDifference.setText ( String.valueOf ( pokemonSpecies.has_gender_differences ) );
-        hatchCounter.setText ( String.valueOf ( pokemonSpecies.getHatch_counter () ) );
-        genderRate.setText ( String.valueOf ( pokemonSpecies.getGender_rate () ) );
-        
 
         return view;
     }

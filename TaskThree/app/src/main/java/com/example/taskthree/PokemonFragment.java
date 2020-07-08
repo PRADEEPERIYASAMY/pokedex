@@ -64,12 +64,12 @@ public class PokemonFragment extends Fragment {
 
     RecyclerView pokemon_list_recyclerview;
     PokemonListItemAdapter pokemonListItemAdapter,search_adapter;
-    private static Retrofit retrofit;
-    private static Retrofit retrofitGen;
+    private Retrofit retrofit;
+    private Retrofit retrofitGen;
     List<String> last_suggest = new ArrayList<> (  );
     MaterialSearchBar searchBar;
-    private static PokemonsCount pokemonsCounts;
-    private static List<ResultsItem> resultsItem = new ArrayList<> (  );
+    private  PokemonsCount pokemonsCounts;
+    private List<ResultsItem> resultsItem = new ArrayList<> (  );
     private int offset;
     private boolean paraLoading;
     ProgressBar progressBar;
@@ -87,17 +87,26 @@ public class PokemonFragment extends Fragment {
     FloatingActionButton floatingActionButton8;
     FloatingActionMenu floatingActionMenu;
 
-    static List<String> gen1 = new ArrayList<> (  );
-    static List<String> gen2 = new ArrayList<> (  );
-    static List<String> gen3 = new ArrayList<> (  );
-    static List<String> gen4 = new ArrayList<> (  );
-    static List<String> gen5 = new ArrayList<> (  );
-    static List<String> gen6 = new ArrayList<> (  );
-    static List<String> gen7 = new ArrayList<> (  );
+    List<String> gen1 = new ArrayList<> (  );
+    List<String> gen2 = new ArrayList<> (  );
+    List<String> gen3 = new ArrayList<> (  );
+    List<String> gen4 = new ArrayList<> (  );
+    List<String> gen5 = new ArrayList<> (  );
+    List<String> gen6 = new ArrayList<> (  );
+    List<String> gen7 = new ArrayList<> (  );
 
     MediaPlayer mediaPlayer;
 
     public PokemonFragment() {
+        gen1.clear ();
+        gen2.clear ();
+        gen3.clear ();
+        gen4.clear ();
+        gen5.clear ();
+        gen6.clear ();
+        gen7.clear ();
+        last_suggest.clear ();
+        resultsItem.clear ();
         retrofit = new Retrofit.Builder ()
                 .baseUrl ( "https://pokeapi.co/api/v2/" )
                 .addConverterFactory ( GsonConverterFactory.create () )
@@ -405,7 +414,7 @@ public class PokemonFragment extends Fragment {
             } );
         }
         catch (Exception ignored){
-
+            ignored.printStackTrace ();
         }
 
 

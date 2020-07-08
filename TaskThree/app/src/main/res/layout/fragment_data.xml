@@ -60,7 +60,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="9dp"
                                 android:layout_marginTop="-2dp"
-                                android:text="Name"
+                                android:text="Not found"
                                 android:textSize="26dp"
                                 android:textStyle="bold"
                                 android:textAlignment="center"
@@ -93,7 +93,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -128,7 +128,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -163,7 +163,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -196,7 +196,7 @@
                                     android:layout_height="match_parent"
                                     android:padding="10dp"
                                     android:id="@+id/pokemon_data_description"
-                                    android:text="hello my name is pradeep how are youjbjbjbvjdbvjdvjdbvjbvdjjbdjbvjfbdjbvjdvb jdbvjdbv jdbjbdjbfjdvj v dbvbdvdvdbjbvdvbjdbjvfjkdf jkfjkdfjnf fjkfjkdfjkdfjdk"/>
+                                    android:text=""/>
                             </ScrollView>
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
@@ -233,7 +233,7 @@
                                 <TextView
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
-                                    android:text="280"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:background="#4FC3F7"
                                     android:gravity="center_vertical"
@@ -272,7 +272,7 @@
                                 <TextView
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
-                                    android:text="280"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:background="#4FC3F7"
                                     android:gravity="center_vertical"
@@ -311,7 +311,7 @@
                                 <TextView
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
-                                    android:text="280"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:background="#4FC3F7"
                                     android:gravity="center_vertical"
@@ -350,7 +350,7 @@
                                 <TextView
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
-                                    android:text="280"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:background="#4FC3F7"
                                     android:gravity="center_vertical"
@@ -389,7 +389,7 @@
                                 <TextView
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
-                                    android:text="280"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:background="#4FC3F7"
                                     android:gravity="center_vertical"
@@ -428,7 +428,7 @@
                                 <TextView
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
-                                    android:text="280"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:background="#4FC3F7"
                                     android:gravity="center_vertical"
@@ -467,7 +467,7 @@
                                 <TextView
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
-                                    android:text="280"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:background="#4FC3F7"
                                     android:gravity="center_vertical"
@@ -526,7 +526,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@drawable/pikachu"
+                                    android:src="@drawable/ops"
                                     android:id="@+id/sprite_image">
                                 </ImageView>
                             </androidx.cardview.widget.CardView>
@@ -547,7 +547,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@drawable/pikachu"
+                                    android:src="@drawable/ops"
                                     android:id="@+id/sprite_image_two">
                                 </ImageView>
                             </androidx.cardview.widget.CardView>
@@ -567,7 +567,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@drawable/pikachu"
+                                    android:src="@drawable/ops"
                                     android:id="@+id/sprite_image_three">
                                 </ImageView>
                             </androidx.cardview.widget.CardView>
@@ -588,7 +588,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@drawable/pikachu"
+                                    android:src="@drawable/ops"
                                     android:id="@+id/sprite_image_four">
                                 </ImageView>
                             </androidx.cardview.widget.CardView>
@@ -638,7 +638,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -673,7 +673,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -707,7 +707,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -741,7 +741,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -775,7 +775,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -809,7 +809,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -843,7 +843,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -877,7 +877,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -912,7 +912,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="6m"
+                                    android:text="-"
                                     android:textAlignment="center"
                                     android:gravity="center_vertical"
                                     android:textStyle="bold"
@@ -955,7 +955,7 @@
             android:layout_height="200dp"
             android:layout_alignTop="@+id/second_pokemon"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/pikachu"
+            android:src="@drawable/ops"
             android:layout_marginTop="-100dp"
             android:id="@+id/second_pokemon_image"
             android:transitionName="image_transaction"

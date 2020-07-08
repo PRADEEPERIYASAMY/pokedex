@@ -40,7 +40,7 @@ public class EvolutionFragment extends Fragment {
 
     int Id;
     PokemonSpecies pokemonSpecies;
-    private static PokemonEvolutionChain pokemonEvolutionChain;
+    PokemonEvolutionChain pokemonEvolutionChain;
     Retrofit retrofit1;
 
     ConstraintLayout oneChain;
